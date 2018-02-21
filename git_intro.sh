@@ -24,3 +24,27 @@ git config --global $setting_name $setting_value
 git checkout -- $file_name
 #discard file changes that have been staged
 git reset HEAD $file_name
+#restore a file to a older version
+git checkout $first_few_characters_of_hash $file_name
+#undo all the changes
+git reset HEAD $repo
+#show current branches
+gir branch
+#show difference between branches
+git diff $branch_1..$branch_2
+#switch to another branch
+git checkout $branch_name
+#create a branch
+git checkout -b $branch_name
+#merge two branches
+git merge $source_branch $destination_branch
+#create a new repository
+git init $project_name
+#show original repository
+git remote -v
+#add git remote repo
+git remote add $remote_name $remote_url
+#pull in changes from a remote repository
+git pull $remote_name $branch_name
+#push changes to a remote repository
+git push $remote_name $branch_name
